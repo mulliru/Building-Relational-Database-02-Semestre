@@ -1,0 +1,5 @@
+Quando Cria um Script SQL deve se começar por primeiro tabelas que possuem apenas a chave primaria
+
+segundo deve se criar as tabelas com apenas UMA chave ESTRANGEIRA
+
+TERCEIRO deve se criar as tabelas com duas ou mais chaves estrangeiras
