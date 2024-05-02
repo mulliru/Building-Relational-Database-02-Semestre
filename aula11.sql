@@ -68,4 +68,32 @@ select stddev(valor) from modelo;
 
 select stddev(valor), ds_modelo from modelo group by ds_modelo;
 
+-- HAVING
+select AVG(valor), ds_modelo
+    FROM modelo 
+    group by ds_modelo
+    having avg(valor)>20;
     
+    
+-- EXEMPLO INCORRETO: NÃO É POSSÍVEL CALCULAR A MEDIA ATRAVÉS DO WHERE
+select AVG(valor), ds_modelo
+    FROM modelo 
+    group by ds_modelo
+    WHERE avg(valor)>20;    
+  
+ -- UTILIZANDO APENAS WHERE 
+ -- select * from modelo;
+ 
+ select AVG(valor), ds_modelo
+    FROM modelo 
+    WHERE id_modelo<=5
+    group by ds_modelo ;  
+    
+ -- UTILIZANDO WHERE E HAVING
+ 
+ 
+ select AVG(valor), ds_modelo
+    FROM modelo 
+    WHERE id_modelo<=5
+    group by ds_modelo       
+    having avg(valor)<36
